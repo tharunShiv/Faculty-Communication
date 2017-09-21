@@ -1,0 +1,289 @@
+body{
+      font:15px/1.5 Arial,Helvetica,sans-serif;
+      padding:0;
+      margin:0;
+      background-color:#f3f3f3;
+    }
+
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+
+
+header {
+    background:#35424a;
+    color:#ffffff;
+    padding-top:5px;
+    min-height:70px;
+    border-bottom:#00ffff 3px solid;
+    overflow:hidden;
+}
+header img{
+    float:left;
+    margin-left: 10px;
+    
+}
+header a{
+    color:#ffffff;
+    text-decoration:none;
+    text-transform:capitalize;
+    font-size:16px;
+    }
+
+header li{
+    float:left;
+    display:inline;
+    padding: 51px 60px 0 0px;
+    
+}
+
+header #branding{
+    float:left;
+}
+
+header #branding h1{
+    margin-top: 60px;
+    margin-left:8px;
+    color:aqua;
+}
+
+header nav{
+    float:right;
+    margin-top:10px;
+}
+
+header .highlight , header .current a{
+    color:aqua;
+    font-weight:bold;
+}
+
+header a:hover{
+    color:aqua;
+    font-weight:bold;
+}
+
+
+ #showcase{
+    min-height:150px;
+    max-height:300px;
+    background:url("../img/dsce.png") no-repeat 0 -280px ;
+     border-left:10px solid #35424a;
+     border-right:12px solid #35424a;
+     border-bottom:3px solid aqua;
+     text-align:center;
+     color:#ffffff;
+}
+
+ #showcase_about{
+    min-height:100px;
+    max-height:150px;
+    background:url("../img/dsce.png") no-repeat 0 -280px ;
+     border-left:10px solid #35424a;
+     border-right:12px solid #35424a;
+     border-bottom:3px solid aqua;
+     text-align:center;
+     color:#ffffff;
+}
+#showcase_about h1{
+    margin-top:40px;
+    font-size:25px;
+}
+
+#showcase_about p{
+    margin-top:0px;
+    
+    
+    font-size:20px;
+}
+#showcase h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+    
+}
+#showcase p{
+ font-size:20px;
+}
+
+.containerlogin{
+    width:65%;
+    margin:auto;
+   
+}
+
+#loginselect{
+    margin-left:100px
+}
+
+.logina{
+    float:right;
+    margin:auto;
+    overflow:hidden;
+    margin-right:100px;
+    width:200px;
+    margin-top:25px;
+}
+
+#loginside{
+   width:30%;
+    
+    color:black;
+    margin:auto;
+    
+}
+
+form{
+    align-content: center;
+    
+}
+.ifield{
+    border:none;
+    border-bottom:2px solid aqua;
+    
+}
+.ifield:focus{
+    outline:none;
+}
+input{
+    margin-top:5px;
+    margin-left:75px;
+    margin-right:75px;
+    }
+#log{
+    margin-left:90px;
+    border:1px solid aqua;
+   background-color:white;
+    color:black;
+    font-weight:bold;
+}
+
+#sign{
+    margin-left:25px;
+     border:1px solid aqua;
+    background-color:white;
+    color:black;
+    font-weight:bold;;
+}
+#sign:hover , #search:hover , #submit:hover , #log:hover {
+    background-color:aqua;
+    color:white;
+    border:1px solid aqua;
+    }
+#search , #submit{
+    border:1px solid aqua;
+   background-color:white;
+    color:black;
+    font-weight:bold;
+}
+
+
+legend{
+    color:black;
+    font-weight:bold;
+}
+
+section article{
+    float:left;
+    font-size:17px;
+    
+    
+}
+
+ #a1{
+    float:left;
+    width:200px;
+}
+section #a2{
+    float:none;
+    margin-left:300px;
+}
+section #a3{
+    float:right;
+    margin-left:100px;
+}
+section #a4{
+    float:right;
+    margin-left:100px;
+}
+section aside{
+    float:right;
+    background-color:#35424a;
+    padding:20px;
+    color:white;
+    border:2px solid aqua;
+    
+}
+
+.caside{
+    margin-top:22px;
+    }
+
+
+.fabout{
+    background-color:#35424a;
+    min-height:50px;
+    max-height:70px;
+    align-content:center;
+    text-align:center;
+    border-top:2px solid aqua;
+    margin-top:50px;
+}
+.fabout p{
+    padding-top:5px;
+    color:white;
+}
+.fabout a{
+    text-decoration:none;
+    font-weight:bold;
+}
+.fabout a:visited{
+    color:aqua;
+    }
+.fabout a:hover{
+    color:white;
+}
+.fcontactus{
+    background-color:#35424a;
+    min-height:30px;
+    max-height:50px;
+    align-content:center;
+    text-align:center;
+    border-top:2px solid aqua;
+    margin-top:19px;
+}
+.fcontactus p{
+    color:white;
+    
+}
+.fconatctusspan{
+    font-weight:bold;
+    color:aqua;
+}
+
+.flogin{
+    margin-top:325px;
+     background-color:#35424a;
+    min-height:50px;
+    max-height:70px;
+    align-content:center;
+    text-align:center;
+    border-top:2px solid aqua;
+}
+.flogin p{
+    
+    color:white;
+}
+.flogin a{
+    text-decoration:none;
+    font-weight:bold;
+}
+.flogin a:visited{
+    color:aqua;
+    }
+.flogin a:hover{
+    color:white;
+}
