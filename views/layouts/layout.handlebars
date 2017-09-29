@@ -33,11 +33,30 @@
                           <li><a href="/users/register">Register</a></li>
                           <li><a href="/users/about">About </a></li>
                           <li><a href="/users/contactus">Contact Us</a></li>
+                          <li><a href="/users/logout">LogOut</a></li>
                         </ul>  
                      </nav>
               
           </header>
           
+         <div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert-danger">{{error}}</div>
+          {{/if}}
+          
           {{{body}}}
+        </div>
+
+        
+      </div>
       </body>
 </html>

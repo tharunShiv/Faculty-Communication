@@ -150,11 +150,35 @@ header a:hover{
 
 }
 
+.alert-danger{
+   background-color:#E0ABAB;
+   border:1px solid #FA0000;
+   color:red;
+   text-align:center;
+   width:30%;
+   margin:auto;
+   margin-bottom:1%;
+   }
+
+   .alert-success{
+    background-color:#7BDD83;
+    border:1px solid #0DAC1A;
+    color:#03720C;
+    text-align:center;
+    width:30%;
+    margin:auto;
+    margin-bottom:1%;
+    margin-top:1%;
+    }
+
 form{
     align-content: center;
     
 }
 .ifield{
+    text-align: center;
+    width: 80%;
+    margin-left:10%;
     border:none;
     border-bottom:2px solid aqua;
     
