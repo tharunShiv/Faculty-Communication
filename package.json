@@ -1,0 +1,43 @@
+{
+  "name": "faculty-communication",
+  "version": "1.0.0",
+  "description": "A web-application for the faculties to communicate with each other at college and more...",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tharunShiv/Faculty-Communication.git"
+  },
+  "keywords": [
+    "faculty",
+    "communication",
+    "web-app",
+    "website",
+    "chat"
+  ],
+  "author": "--Tharun K--",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tharunShiv/Faculty-Communication/issues"
+  },
+  "homepage": "https://github.com/tharunShiv/Faculty-Communication#readme",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "nodemon": "^1.12.1",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  }
+}
