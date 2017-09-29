@@ -29,11 +29,17 @@
                   </div>
                       <nav>
                         <ul>
+                          {{#if user}}
+                          <li><a href="/">Home</a></li>
+                          <li><a href="/users/about">About </a></li>
+                          <li><a href="/users/contactus">Contact Us</a></li>
+                          <li><a href="/users/logout">LogOut</a></li>
+                          {{else}}
                           <li><a href="/">Home</a></li>
                           <li><a href="/users/register">Register</a></li>
                           <li><a href="/users/about">About </a></li>
                           <li><a href="/users/contactus">Contact Us</a></li>
-                          <li><a href="/users/logout">LogOut</a></li>
+                          {{/if}}
                         </ul>  
                      </nav>
               
