@@ -1,0 +1,70 @@
+
+
+
+<!--<aside id="mailal" >
+                       <h3>Go to</h3>
+                       <ul>
+                          <li><a href="/users/chat" class="list">ChatRoom</a></li>
+                          <li><a href="/users/home" class="list">Search Faculties</a></li>
+                          <li><a href="/users/mail" class="list">Mail Faculties</a></li>
+                          <hr/><br/>
+                          <li><a href="/users/profileu" class="list">Update your Profile</a></li>
+                          <li><a href="/users/profilev" class="list">View your Profile</a></li>
+                       </ul>
+                     </aside>
+
+-->
+<div class="profileu">
+<form method="post" action="/users/profileu">
+  <fieldset id="profileF">
+      <legend>Your Profile</legend>
+     <br/>   
+    <label>Name</label><br/>
+    <input type="text" class="ifield" placeholder="Name" name="name"><br/><br/>
+  
+  
+    <label>Username</label><br/>
+    <input type="text" class="ifield" placeholder="Username" name="username"><br/><br/>
+  
+   
+    <label>Email</label><br/>
+    <input type="email" class="ifield" placeholder="Email" name="email"><br/><br/>
+  
+  
+    <label>Password</label><br/>
+    <input type="password" class="ifield" placeholder="Password" name="password"><br/><br/>
+  
+  
+    <label>Confirm Password</label><br/>
+    <input type="password" class="ifield" placeholder="Password" name="password2"><br/><br/>
+  
+  <button type="submit" id="sign">Submit</button><br/><br/>
+  </fieldset>
+  </form>
+
+
+<form method="post" action="/users/profileu">
+  <fieldset id="profileF2">
+      <legend>About You</legend>
+     <br/>   
+    <label>Designation</label><br/>
+    <input type="text" class="ifield" placeholder="designation" name="designation"><br/><br/>
+  
+  
+    <label>Department</label><br/>
+    <input type="text" class="ifield" placeholder="department" name="department"><br/><br/>
+  
+    <label>Please tick the Designations you are associated with </label><br/>
+    <label><span style="color:chartreuse">(You will be regularly updated with Information from these Fields)</span></label>
+     <br/>
+     <input type="checkbox" name="designation" value="lab">Labs<br>
+    <input type="checkbox" name="designation" value="classTeacher">Class Teacher<br/>
+    <input type="checkbox" name="designation" value="Co-ordinator">Co-ordinator<br>
+    <input type="checkbox" name="designation" value="HOD">Head of the Department <br/>
+    <input type="checkbox" name="designation" value="mil">MIL<br/>
+    <input type="checkbox" name="designation" value="SIL">SIL<br/>
+
+     <button type="submit" id="sign">Submit</button><br/><br/>
+  </fieldset>
+  </form>
+</div>

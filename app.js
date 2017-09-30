@@ -11,8 +11,62 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
+
 mongoose.connect('mongodb://localhost/Faculty-Communication');
 var db = mongoose.connection;
+
+
+
+//chat start /*
+
+/*
+
+var client = require('socket.io').listen(3000).sockets;
+mongoose.connect('mongodb://localhost/Faculty-Communication',function(err,db){
+  if(err) throw err;
+    
+  //This statement was just added to test 
+  var db = mongoose.connection;
+
+    client.on('connection',function(socket){
+       //var col= db.collection('messages');
+
+       sendStatus = function(s){
+         //we are passing string here
+         socket.emit('status', s);
+       }
+
+      //wait for input
+      socket.on('input',function(data){
+        var name = data.name,
+          message = data.message,
+          whitespacePattern = /^\s*$/;
+
+          if(whitespacePattern.test(name) || whitespacePattern.test(message)){
+            sendStatus('Name and message is required.');
+          }else{
+            col.insert({name: name , message:message} , function(){
+              console.log('inserted');
+            });
+          }
+      });
+});
+});
+
+//chat ends
+//Chat modules starts here
+//var mongo = require('mongodb').MongoClient,
+
+
+//chat require modules end here - 
+
+//mongoose.connect('mongodb://localhost/Faculty-Communication');
+
+//var db = mongoose.connection;
+*/
+
+
+
 
 //Create routes
 var routes = require('./routes/index');
@@ -81,9 +135,18 @@ app.use(function (req, res, next) {
   
 
   // Set Port with port number
-app.set('port', (process.env.PORT || 3000));
-
+   //this line is commented to test  ->
+    app.set('port', (process.env.PORT || 3000));
+  console.log('Server started');
 //just telling the user that server has started
-app.listen(app.get('port'), function(){
+
+//this whole pragraph has been commented
+   app.listen(app.get('port'), function(){
+  
 	console.log('Server started on port '+app.get('port'));
-});
+  });
+
+
+
+
+

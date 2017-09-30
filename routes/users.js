@@ -4,6 +4,8 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
 
+
+
 var User = require('../models/user');
 
 // Register route
@@ -14,6 +16,22 @@ router.get('/register', function(req, res){
 router.get('/home', ensureAuthenticated, function(req, res){
 	res.render('home');
 });
+
+router.get('/chat',ensureAuthenticated, function(req, res){
+	res.render('chat');
+});
+
+router.get('/mail',ensureAuthenticated, function(req, res){
+	res.render('mail');
+});
+
+router.get('/profileu',ensureAuthenticated, function(req, res){
+	res.render('profileu');
+});
+router.get('/profilev',ensureAuthenticated, function(req, res){
+	res.render('profilev');
+});
+
 
 function ensureAuthenticated(req,res,next){
 	if(req.isAuthenticated()){
@@ -39,6 +57,7 @@ router.get('/index',  function(req, res){
 router.get('/contactus',  function(req, res){
 	res.render('contactus');
 });
+
 
 router.post('/register', function(req, res){
 	var name = req.body.name;
@@ -118,6 +137,10 @@ passport.authenticate('local', {successRedirect:'/users/home', failureRedirect:'
 function(req, res) {
   res.redirect('/');
 });
+
+
+
+
 
 router.get('/logout', function(req, res){
   req.logout();

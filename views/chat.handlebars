@@ -1,0 +1,85 @@
+ <aside id="chatal" >
+                       <h3>Go to</h3>
+                       <ul>
+                          <li><a href="/users/chat" class="list">ChatRoom</a></li>
+                          <li><a href="/users/home" class="list">Search Faculties</a></li>
+                          <li><a href="/users/mail" class="list">Mail Faculties</a></li>
+                          <hr/><br/>
+                          <li><a href="/users/profileu" class="list">Update your Profile</a></li>
+                          <li><a href="/users/profilev" class="list">View your Profile</a></li>
+                       </ul>
+                  </aside>
+
+
+
+<div class="chat">
+    <input type="text" class="chat-name" placeholder="Enter your name">
+    <div class="chat-messages">
+    <strong>Tharun</strong> : Hello<br/>
+    <strong>Shiv</strong>  : Hello Tharun<br/>
+     <strong>Tharun</strong> : This is the chat Feature<br/>
+     <strong>Shiv</strong> : Its so awesome<br/>
+     <strong>Tharun</strong> : Yeah Thanks<br/>
+     <strong>Shiv</strong> : How did you build it?<br/>
+     <strong>Tharun</strong> : I used Web Designing <br/>
+    <strong>Shiv</strong> : Cool<br/>
+    </div>
+    <textarea class="chat-textarea" placeholder="Type your message"></textarea>
+    <div class="chat-status">Status: <span>Idle</span></div>
+    </input>
+</div>
+
+<script src="http://127.0.0.1:3000/socket.io/socket.io.js">
+</script>
+
+
+<script>
+    (function() {
+        var getNode = function(s){
+            return document.querySelector(s);
+        },
+        //get required nodes
+        status = getNode('.chat-status span'),
+        textarea = getNode('.chat textarea'),
+        chatName = getNode('.chat-name'),
+        
+        statusDefault=status.textContent;
+        
+        setStatus = function(s){
+            status.textcontent = s;         
+        };
+        
+        setStatus('Testing...');
+
+        try{
+            var socket=io.connect('http://127.0.0.1:3000');
+        }catch(e){
+            //send warn message
+        }
+          
+        if(socket !== undefined){
+            
+            //listen for a status
+            socket.on('status', function(data){
+                setStatus();
+            }
+
+            //listen for keydown
+            textarea.addEventListener('keydown', function(event){
+                var self = this,
+                name = chatName.value;
+
+                if(event.which ===13 && event.shiftKey === false){
+                     socket.emit('input',{
+                         name: name,
+                         message: self.value
+                     });
+                     //prevent default behaviour
+                    event.preventDefault();
+                }
+
+            });
+        }
+    })();
+
+</script>

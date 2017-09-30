@@ -110,7 +110,7 @@ header a:hover{
 }
 
 .containerlogin{
-    width:65%;
+    width:100%;
     margin:auto;
    
 }
@@ -136,12 +136,41 @@ header a:hover{
     
 }
 
+
+
 #registerF{
    width:25%;
    color:black;
    font-size: 20px;
    margin:auto;
    text-align: center;
+}
+
+.profileu{
+    
+    width:80%;
+    margin:auto;
+    padding:20px;
+    
+}
+
+#profileF{
+    width:40%;
+    color:black;
+    font-size: 20px;
+    
+    text-align: center;
+    margin:auto;
+}
+
+#profileF2{
+    width:40%;
+    color:black;
+    font-size: 20px;
+    
+   
+    margin:auto;
+}
 }
 
 .registerT{
@@ -174,6 +203,57 @@ header a:hover{
 form{
     align-content: center;
     
+}
+
+.list{
+    color:white;
+    text-decoration: none;
+    font-size:17px;
+}
+.list:hover{
+    color:aqua;
+    text-decoration:underline;
+}
+
+
+
+#articleS{
+    margin-left:5%;
+    margin-top:3%;
+}
+
+#loginal{
+    float:left;
+    margin-left:5%;
+    margin-top:2%;
+    
+}
+
+#mailS{
+    padding:20px;
+    margin-left:15%;
+    margin-top:5%;
+    width:50%;
+    display:inline-block;
+}
+
+#chatal{
+    float:left;
+    margin-left:5%;
+    margin-top:2%;
+    background-color:#35424a;
+    border:2px solid aqua;
+    padding:20px;
+}
+
+#mailal{
+    float:left;
+    margin-left:5%;
+    margin-top:2%;
+    background-color:#35424a;
+    border:2px solid aqua;
+    padding:20px;
+
 }
 .ifield{
     text-align: center;
@@ -327,3 +407,60 @@ section aside{
 .flogin a:hover{
     color:white;
 }
+
+body,textarea,input{
+    font:13px "Trebuchet MS", sans-serif;
+}
+
+.chat{
+    
+    margin:auto;
+    margin-top:5%;
+    max-width:300px;
+}
+
+.chat-messages,
+.chat-textarea,
+.chat-name{
+    border:2px solid aqua;
+}
+
+.chat-message{
+    margin-bottom:10px;
+}
+
+.chat-messages{
+    width:100%;
+    height:300px;
+    overflow-y:scroll;
+    padding:10px;
+}
+
+.chat-name{
+    width:100%;
+    padding:10px;
+    border-bottom:0;
+    margin:0;
+}
+
+.chat-textarea{
+    width:100%;
+    padding:10px;
+    border-bottom:2px solid aqua;
+    margin:0;
+    max-width:100%;
+}
+
+.chat-status{
+    color:#888;
+}
+
+.chat textarea,
+.chat-name{
+    outline:none;
+}
+
+
+
+
+
