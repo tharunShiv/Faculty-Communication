@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-lg-12">
+      <%if (success_msg.message){ %>
+        <div class="alert-success"><%= flash.success_msg %></div>
+      <% } %>
+
+      <% if (error_msg.message){ %>
+        <div class="alert-danger"><%=flash.error_msg %></div>
+        <% } %>
+
+      <% if (error.message) { %>
+        <div class="alert-danger"><%=flash.error%></div>
+    
+        <% } %>
+      
+    </div>
+
+    
+  </div>

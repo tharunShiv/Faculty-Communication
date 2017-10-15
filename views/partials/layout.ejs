@@ -1,0 +1,24 @@
+<header> 
+  <img src="/img/logo.gif" >
+  
+      
+      <div id="branding">
+         <h1>Faculty-Communication</h1>
+      </div>
+          <nav>
+            <ul>
+              <% if (typeof user == 'object' && user) { %>
+              <li><a href="/users/home">Home</a></li>
+              <li><a href="/users/about">About </a></li>
+              <li><a href="/users/contactus">Contact Us</a></li>
+              <li><a href="/users/logout">LogOut</a></li>
+              <%} else{ %>
+              
+              <li><a href="/users/register">Register</a></li>
+              <li><a href="/users/about">About </a></li>
+              <li><a href="/users/contactus">Contact Us</a></li>
+              <% } %>
+            </ul>  
+         </nav>
+  
+</header>

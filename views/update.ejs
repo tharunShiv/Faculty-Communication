@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>DSCE | Welcome</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="dsce,dayananda,sagar,college,of,engineering,faculty,database,contact,faculties,mini,project">
+    <meta name="author" content="Tharun K">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="A faculty contact Database">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+
+<body>
+    <% include partials/layout.ejs %>
+
+        <aside id="mailal">
+            <ul>
+                <li><a href="/users/profileu" class="list">Change Login Info</a></li>
+                <li><a href="/users/update" class="list">Update about Yourself</a></li>
+            </ul>
+        </aside>
+        <div class="profileu">
+            <form method="post" action="/users/update">
+                <fieldset id="profileF2">
+                    <legend>About You</legend>
+                    <br/>
+                    <label>Designation</label><br/>
+                    <input type="text" class="ifield" placeholder="designation" name="designation"><br/><br/>
+
+
+                    <label>Department</label><br/>
+                    <select id="loginselect" name="department">
+        <option value="A">--SELECT-- </option>option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Electronic And Communication">Electronics and Communication </option>
+        <option value="Electrical and Electronics">Electrical and Electronics</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Telecommunication">Telecommunication</option>
+        <option value="Civil">Civil</option>
+        <option value="Bio-Technology">Bio-Technology</option>
+        <option value="OTHERS">OTHERS</option>
+     </select><br/><br/>
+
+                    <label>Field of Interests</label><br/>
+                    <input type="checkbox" name="foi" value="IOT">IOT<br/>
+                    <input type="checkbox" name="foi" value="Machine Learning">Machine Learning<br/>
+                    <input type="checkbox" name="foi" value="Image Processing">Image Processing<br/>
+                    <input type="checkbox" name="foi" value="Artificial Intelligence">Artificial Intelligence<br/>
+                    <input type="checkbox" name="foi" value="Web Development">Web Development<br/>
+                    <input type="checkbox" name="foi" value="Android">Android<br/>
+                    <input type="checkbox" name="foi" value="Cyber Security">Cyber Security<br/>
+                    <input type="checkbox" name="foi" value="Ethical Hacking">Ethical Hacking<br/><br/>
+
+                    <label>Expert In</label><br/>
+                    <input type="checkbox" name="ei" value="IOT">IOT<br/>
+                    <input type="checkbox" name="ei" value="Machine Learning">Machine Learning<br/>
+                    <input type="checkbox" name="ei" value="Image Processing">Image Processing<br/>
+                    <input type="checkbox" name="ei" value="Artificial Intelligence">Artificial Intelligence<br/>
+                    <input type="checkbox" name="ei" value="Web Development">Web Development<br/>
+                    <input type="checkbox" name="ei" value="Android">Android<br/>
+                    <input type="checkbox" name="ei" value="Cyber Security">Cyber Security<br/>
+                    <input type="checkbox" name="ei" value="Ethical Hacking">Ethical Hacking<br/><br/>
+
+                    <label>Contact Number<span style="color:chartreuse;font-size:17px;">(Visible only to your Department by default)</span></label>
+                    <input type="number" name="phoneno" class="ifield" placeholder="+91**********" /><br/><br/>
+
+                    <label>Please tick the Designations you are associated with </label><br/>
+                    <label><span style="color:chartreuse;font-size:17px;">(You will be regularly updated with Information from these Fields)</span></label>
+                    <br/>
+                    <input type="checkbox" name="mdesignation" value="Lab">Labs<br>
+                    <input type="checkbox" name="mdesignation" value="ClassTeacher">Class Teacher<br/>
+                    <input type="checkbox" name="mdesignation" value="Co-ordinator">Co-ordinator<br>
+                    <input type="checkbox" name="mdesignation" value="HOD">Head of the Department <br/>
+                    <input type="checkbox" name="mdesignation" value="MIL">MIL<br/>
+                    <input type="checkbox" name="mdesignation" value="SIL">SIL<br/>
+
+                    <button type="submit" id="sign">Submit</button><br/><br/>
+                </fieldset>
+            </form>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<html>
+    
+    <head>
+        <title>DSCE | Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="dsce,dayananda,sagar,college,of,engineering,faculty,database,contact,faculties,mini,project">
+        <meta name="author" content="Tharun K">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="A faculty contact Database">
+        
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    </head>
+    
+    <body>
+      <% include partials/layout.ejs %>
+
+<aside id="chatal" >
+        <h2>Welcome <span style="color:aqua;"><%= user.name %></span></h2>
+    <h3>Go to</h3>
+    <ul>
+       <li><a href="/users/chat" class="list">ChatRoom</a></li>
+       <li><a href="/users/home" class="list">Search Faculties</a></li>
+       <li><a href="/users/mail" class="list">Mail Faculties</a></li>
+       <hr/><br/>
+       <li><a href="/users/profileu" class="list">Update your Profile</a></li>
+       <li><a href="/users/profilev" class="list">View your Profile</a></li>
+    </ul>
+</aside>
+
+
+
+<div class="chat">
+<input type="text" class="chat-name" value="<%= user.name %>" disabled>
+<div class="chat-messages"></div>
+
+
+<textarea class="ta" placeholder="Type your message"></textarea>
+<div class="chat-status">Status: <span>Idle</span></div>
+
+</div>
+
+<script src="http://127.0.0.1:8080/socket.io/socket.io.js">
+</script>
+
+
+<script>
+    //a function to wrap all the functionality
+(function() {
+var getNode = function(s){
+return document.querySelector(s);
+},
+//get required nodes
+messages = getNode('.chat-messages')
+status = getNode('.chat-status span'),
+textarea = getNode('.chat textarea'),
+chatName = getNode('.chat-name'),
+
+statusDefault=status.textContent;
+console.log(statusDefault);
+  console.log(textarea);
+  console.log(chatName);
+
+  setStatus = function(s){
+status.textcontent = s;    
+
+
+
+
+if(s !== statusDefault){
+    var delay = setTimeout(function(){
+          setStatus(statusDefault);
+          
+    },4000);
+    clearInterval(delay);
+}
+};
+
+setStatus('Testing...');
+
+
+
+
+try{
+var socket=io.connect('http://127.0.0.1:8080');
+}catch(e){
+//send warn message
+}
+
+if(socket !== undefined){
+//listen for output
+socket.on('output', function(data){
+     console.log(data);
+     if(data.length){
+         //loop through results
+         for(var x=0; x<data.length;x=x+1){
+             var message = document.createElement('div');
+             message.setAttribute('class', 'chat-message');
+             message.textContent= data[x].name + '  : '+data[x].message;
+
+              //append
+              messages.appendChild(message);
+              messages.insertBefore(message, messages.firstChild);
+              
+            }
+     }
+});
+
+//listen for a status
+socket.on('status', function(data){
+setStatus((typeof data === 'object')? data.message :data);
+
+if(data.clear === true){
+    textarea.value = '';
+};
+
+});
+
+//listen for keydown
+textarea.addEventListener('keydown', function(event){
+var self = this,
+name = chatName.value;
+//13 is for enter key value
+console.log(event);
+if(event.which ===13 && event.shiftKey === false){
+  socket.emit('input',{
+      name: name,
+      message: self.value
+  });
+  //prevent default behaviour
+ event.preventDefault();
+}
+
+});
+}
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>DSCE | Welcome</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="dsce,dayananda,sagar,college,of,engineering,faculty,database,contact,faculties,mini,project">
+    <meta name="author" content="Tharun K">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="A faculty contact Database">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+
+<body>
+    <% include partials/layout.ejs %>
+
+        <!--<aside id="mailal" >
+                       <h3>Go to</h3>
+                       <ul>
+                          <li><a href="/users/chat" class="list">ChatRoom</a></li>
+                          <li><a href="/users/home" class="list">Search Faculties</a></li>
+                          <li><a href="/users/mail" class="list">Mail Faculties</a></li>
+                          <hr/><br/>
+                          <li><a href="/users/profileu" class="list">Update your Profile</a></li>
+                          <li><a href="/users/profilev" class="list">View your Profile</a></li>
+                       </ul>
+                     </aside>
+
+-->
+        <aside id="mailal">
+            <ul>
+                <li><a href="/users/profileu" class="list">Change Login Info</a></li>
+                <li><a href="/users/update" class="list">Update about Yourself</a></li>
+            </ul>
+        </aside>
+       
+        <div class="profileu">
+            <form method="post" action="/users/profileu">
+                <fieldset id="profileF">
+                    <legend>Your Login Info</legend>
+                    <br/>
+                    <label>Name</label><br/>
+                    <input type="text" class="ifield" placeholder="Name" name="name"><br/><br/>
+
+
+                    <label>Username</label><br/>
+                    <input type="text" class="ifield" placeholder="Username" name="username"><br/><br/>
+
+
+                    <label>Email</label><br/>
+                    <input type="email" class="ifield" placeholder="Email" name="email"><br/><br/>
+
+
+                    <label>Password</label><br/>
+                    <input type="password" class="ifield" placeholder="Password" name="password"><br/><br/>
+
+
+                    <label>Confirm Password</label><br/>
+                    <input type="password" class="ifield" placeholder="Password" name="password2"><br/><br/>
+
+                    <button type="submit" id="sign">Submit</button><br/><br/>
+                </fieldset>
+            </form>
+
+
+
+        </div>
+      
+</body>
+
+</html>

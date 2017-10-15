@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>DSCE | Welcome</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="dsce,dayananda,sagar,college,of,engineering,faculty,database,contact,faculties,mini,project">
+    <meta name="author" content="Tharun K">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="A faculty contact Database">
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+
+<body>
+    <% include partials/layout.ejs %>
+
+        <h2 class="page-header">Register</h2>
+
+        <%# ERRORS TO BE DISPLAYED HERE THROUGH FLASH MESSAGES  #%>
+
+
+            <form method="post" action="/users/register">
+                <fieldset id="registerF">
+                    <legend>Register</legend>
+                    <br/>
+                    <label>Name<span style="color:red;">*</span></label><br/>
+                    <input type="text" class="ifield" placeholder="Name" name="name"><br/><br/>
+                    
+
+
+                    <label>Username<span style="color:red;">*</span></label><br/>
+                    <input type="text" class="ifield" placeholder="Username" name="username"><br/><br/>
+
+                    <label>Select any One<span style="color:red;">*</span></label><br/> I'm a Faculty<input type="radio"
+                        name="gender" value="faculty" /><br/><br/> I'm a Student<input type="radio" name="gender" value="student"
+                    /><br/><br/>
+
+                    <label>Referral Code<span style="color:red;">*</span></label>
+                    <input type="text" class="ifield" name="referralcode" placeholder="Enter your Referral Code " /><br/>
+                    <p style="color:#14D60E;font-size:17px;">(<a href="/users/contactus">Contact Us</a>, if you don't have one)  </p>
+                    <br/><label>Email<span style="color:red;">*</span></label><br/>
+                    <input type="email" class="ifield" placeholder="Email" name="email"><br/><br/>
+
+
+                    <label>Password<span style="color:red;">*</span></label><br/>
+                    <input type="password" class="ifield" placeholder="Password" name="password"><br/><br/>
+
+
+                    <label>Confirm Password<span style="color:red;">*</span></label><br/>
+                    <input type="password" class="ifield" placeholder="Password" name="password2"><br/><br/>
+
+                    <button type="submit" id="sign">Submit</button><br/><br/>
+                </fieldset>
+            </form>
+</body>
+
+</html>

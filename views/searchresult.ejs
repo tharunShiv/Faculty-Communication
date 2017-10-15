@@ -1,0 +1,77 @@
+
+
+
+<html>
+        
+        <head>
+            <title>DSCE | Welcome</title>
+            <meta charset="UTF-8">
+            <meta name="keywords" content="dsce,dayananda,sagar,college,of,engineering,faculty,database,contact,faculties,mini,project">
+            <meta name="author" content="Tharun K">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <meta name="description" content="A faculty contact Database">
+            
+            <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        </head>
+        
+        <body>
+          <% include partials/layout.ejs %>
+    <section id="showcase_about">
+        <div class="container">
+          <h1>D  S  I</h1>
+            <pre>
+            <p>   L  i  v  e    T  h  e    D  r  e  a  m</p>
+            </pre>
+        </div>
+      </section>
+      
+      
+      <section id="login">
+          <div class="containerlogin">
+            
+              <aside id="loginal">
+                    <h2>Welcome <span style="color:aqua;"><%= user.name %></span></h2>
+                   <h3>Go to</h3>
+                   <ul></ul>
+                      <li><a href="/users/chat" class="list">ChatRoom</a></li>
+                      <li><a href="/users/home" class="list">Search Faculties</a></li>
+                      <li><a href="/users/mail" class="list">Mail Faculties</a></li>
+                      <hr/><br/>
+                      <li><a href="/users/profileu" class="list">Update your Profile</a></li>
+                      <li><a href="/users/profilev" class="list">View your Profile</a></li>
+                   </ul>
+              </aside>
+                
+              <article id="articleS">
+                    <h3>The Search Results are -> </h3> 
+                     <% if(noMatch !== undefined){ %>
+                        <h3> <%= noMatch %> </h3>
+                        <% } %>
+                    <ul>
+                    <% users.forEach(function(el,index) { %>
+                        <li><span style="font-size:25px; text-decoration:underline;">Name:</span> <span style="font-size:25px;text-transform:capitalize;"> <%= el.name %> </span> </li><br/>
+                        <li><span style="text-decoration:underline;font-size:20px">Designation</span>: <%= el.designation %> </li><br/>
+                        <li><span style="text-decoration:underline;font-size:20px">Part Of</span>: <%= el.mdesignation  %> </li><br/>
+                        <li><span style="text-decoration:underline;font-size:20px">Field Of Interest</span>: <%= el.foi %> </li><br/>
+                        <li><span style="text-decoration:underline;font-size:20px">Expert In</span>: <%= el.ei %> </li><br/>
+                        <li><span style="text-decoration:underline;font-size:20px">Department</span>: <%= el.department %> </li><br/>
+                        <li><span style="text-decoration:underline;font-size:20px">EmailId</span>: <%= el.email %> </li>
+                        <li><span style="text-decoration:underline;font-size:20px">Phoneno</span>: <%= el.phoneno %> </li><br/><br/>
+                        <hr>
+                     <%  }); %>
+
+                    </ul>
+                  </article>
+                 </div>
+
+
+
+
+
+
+          
+              
+             
+            
+            </body>
+            </html>
